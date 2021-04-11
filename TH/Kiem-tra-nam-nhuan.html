@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let year = +prompt('Enter a year');
+    // if (year % 4 == 0) {
+    //     if (year % 100 == 0) {
+    //         if (year % 400 == 0) {
+    //             alert(year + ' is a leap year');
+    //         } else {
+    //             alert(year + ' is NOT a leap year');
+    //         }
+    //     } else {
+    //         alert(year + ' is a leap year');
+    //     }
+    // } else {
+    //     alert(year + ' is a NOT leap year');
+    // }
+
+    let year = +prompt('Enter a year')
+    let isLeapYear = false;
+    let isDiVisibleBy4 = year % 4 == 0;
+    if (isDiVisibleBy4) {
+        let isDiVisibleBy100 = year % 100 == 0;
+        if (isDiVisibleBy100) {
+            let isDiVisibleBy400 = year % 400 == 0;
+            if (isDiVisibleBy400) {
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    }
+    if (isLeapYear) {
+        alert(year + ' is a Leap Year');
+    } else {
+        alert(year + ' is a NOT Leap Year');
+    }
+
+
+
+</script>
+</body>
+</html>
